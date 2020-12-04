@@ -12,6 +12,7 @@ const inlineCss = require("nodemailer-juice");
 
 const transporter = nodemailer.createTransport({
   service: "Gmail",
+  sendmail: true,
   auth: {
     user: "grofarmtest@gmail.com",
     pass: "gro123farm",
@@ -204,7 +205,8 @@ router.route("/getproductsbylocation/:id").get((req, res) => {
     .catch((err) => res.status(400).json("Error:" + err));
 });
 
-router.route("/add").post((req, res) => {
+//router.route("/add").post((req, res) => {
+  router.route("http://localhost:3000/createuser").post((req, res) => {
   const username = req.body.username;
   const email = req.body.email;
   const password = req.body.password;

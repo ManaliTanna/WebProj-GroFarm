@@ -16,13 +16,31 @@ app.use (fileUpload());
 
 //DB Connection
 //const uri = process.env.ATLAS_URI;
-const uri="mongodb+srv://User0:User0@cluster0.55jau.mongodb.net/test?retryWrites=true&w=majority"
-mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true });
+const uri= "mongodb+srv://User0:User0@cluster0.ctw4f.mongodb.net/test?retryWrites=true&w=majority" ;
+/*mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true });
 
 const connection = mongoose.connection;
 connection.once('open', () => {
     console.log("MongoDB database connection established successfully");
 })
+
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://User0:User0@cluster0.ctw4f.mongodb.net/test?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useCreateIndex: true });
+client.connect(err => {
+    if (err) console.log("error");
+  const collection = client.db("test").collection("test");
+  // perform actions on the collection object
+  //client.close();
+});*/
+
+
+mongoose.connect(uri,
+    { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }, err => {
+        console.log('connected')
+    });
+
+
 
 //Routes
 const exercisesRouter = require('./routes/products');
