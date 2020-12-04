@@ -22,7 +22,7 @@ export default class CreateUser extends Component {
       username: "",
       email: "",
       password: "",
-      role: "Client",
+      role: "",
       selectedFile: null,
       openmodal: false,
     };
@@ -86,7 +86,7 @@ export default class CreateUser extends Component {
     console.log(user);
 
     axios
-      .post("http://localhost:5000/users/add", user)
+      .post("http://localhost:3000/createuser", user)
       .then((res) => console.log(res.data));
 
     this.setState({

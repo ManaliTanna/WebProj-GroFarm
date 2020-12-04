@@ -140,7 +140,7 @@ export default class ExercisesList extends Component {
               <input
                 type="text"
                 className="form-control search-form ml-4 mr-4"
-                placeholder="Search user..."
+                placeholder="Search for a farmer.."
                 value={this.state.type}
                 onChange={this.onChangeSearch}
               />

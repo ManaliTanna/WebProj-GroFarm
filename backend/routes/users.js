@@ -13,8 +13,8 @@ const inlineCss = require("nodemailer-juice");
 const transporter = nodemailer.createTransport({
   service: "Gmail",
   auth: {
-    user: "xyz@email.com",
-    pass: "xyz",
+    user: "grofarmtest@gmail.com",
+    pass: "gro123farm",
   },
 });
 
@@ -218,7 +218,7 @@ router.route("/add").post((req, res) => {
         subject: "Confirm Email",
         html:
           '<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <title>Email</title> </head> <body> <div class="head"><img class="logo" src="cid:unique@logo.ee" /></div> <div class="container"> <div class="container-body"><br/><br/> <h1>' +
-          "Click <a href='http://localhost:5000/verify/" +
+          "Click <a href='http://localhost:3000/verify/" +
           newUser._id +
           "'>Here</a> to verify your email" +
           "</h1><br/><br/>" +
@@ -273,6 +273,8 @@ router.route("/login").post((req, res) => {
     }
   );
 });
+
+
 router.route("/verify").post((req, res) => {
   const username = req.body.username;
   const email = req.body.email;

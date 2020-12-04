@@ -15,7 +15,8 @@ app.use(express.json());
 app.use (fileUpload());
 
 //DB Connection
-const uri = process.env.ATLAS_URI;
+//const uri = process.env.ATLAS_URI;
+const uri="mongodb+srv://User0:User0@cluster0.55jau.mongodb.net/test?retryWrites=true&w=majority"
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true });
 
 const connection = mongoose.connection;
@@ -41,6 +42,7 @@ app.use('/Rating', ratings);
 app.use('/Upload', upload);
 app.use('/verify', verify);
 app.use('/about', about);
+
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
 });

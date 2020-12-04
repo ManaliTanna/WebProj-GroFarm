@@ -53,7 +53,7 @@ export default class Login extends Component {
   onSubmit(e) {
     e.preventDefault();
 
-    fetch("http://localhost:5000/users/login", {
+    fetch("http://localhost:3000/users/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -132,7 +132,9 @@ export default class Login extends Component {
                 </Link>
               </span>
 
+              <Link className="ml-1" to="/myprofile">
               <input type="submit" value="Log in" className="btn mb-4" />
+                </Link>{" "} 
 
               <span className="mt-3">
                Don't have an account?

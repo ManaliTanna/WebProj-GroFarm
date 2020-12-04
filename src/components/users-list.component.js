@@ -140,17 +140,17 @@ export default class ExercisesList extends Component {
         <div className="container mt-5">
           <div className="col-md-12 d-flex justify-content-center">
             <div>
-              <h2 className="mb-4">Latest farmers</h2>
+              <h2 className="mb-4 text-center">Farmers</h2>
               <div className="col-md-12 latest-farmers pl-0 pr-0">
                 <div className="col-md-12 pl-0 pr-0">{this.userList()}</div>
               </div>
               <button className="viewall" onClick={this.seeAllUsers}>
-                See all users
+                See All Farmers
               </button>
             </div>
             <div className="season-products">
-              <h2 className="w-100 text-left mb-4">
-                Products from this season
+              <h2 className="w-100 text-center mb-4">
+                Fresh From the Farm
               </h2>
               <div className="d-flex justify-content-center mb-4">
                 {/* {this.productsList()} */}
@@ -187,7 +187,7 @@ export default class ExercisesList extends Component {
                 </div>
               </div>
               <button className="viewall" onClick={this.seeAllProducts}>
-                See all products
+                See All Products
               </button>
             </div>
           </div>

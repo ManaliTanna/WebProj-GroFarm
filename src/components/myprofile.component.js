@@ -246,7 +246,7 @@ export default class Login extends Component {
 
     axios
       .post(
-        "http://localhost:5000/Upload/updateprofilephotos/" +
+        "http://localhost:3000/Upload/updateprofilephotos/" +
           this.state.cookie._id,
         data
       )
@@ -303,7 +303,7 @@ export default class Login extends Component {
     });
   };
   confirmEdit() {
-    fetch("http://localhost:5000/users/verify", {
+    fetch("http://localhost:3000/users/verify", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -329,7 +329,7 @@ export default class Login extends Component {
               this.state.cookie._id + "." + aux[1]
             );
             axios
-              .post("http://localhost:5000/Upload/upload", fd)
+              .post("http://localhost:3000/Upload/upload", fd)
               .then((res) => {
                 console.log(res);
               });
@@ -345,7 +345,7 @@ export default class Login extends Component {
               photo: this.state.cookie._id + "." + aux[1],
             };
             setInStorage("the_main_app", { cookie: user });
-            fetch("http://localhost:5000/users/update/", {
+            fetch("http://localhost:3000/users/update/", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
@@ -370,7 +370,7 @@ export default class Login extends Component {
               role: this.state.role,
               photo: this.state.cookie.photo,
             };
-            fetch("http://localhost:5000/users/update/", {
+            fetch("http://localhost:3000/users/update/", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
@@ -754,10 +754,13 @@ export default class Login extends Component {
 
   render() {
     const { cookie } = this.state;
-    if (!cookie) {
+    if (1) {
       return (
         <div>
           <Navbar />
+          <div className="container about__us text-center">
+            <h2>Login to see profile</h2>
+          </div>
         </div>
       );
     } else {

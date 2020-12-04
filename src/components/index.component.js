@@ -9,7 +9,7 @@ export default class TodosList extends Component {
           <div className="header-img">
             <div className="row nav">
               <div className="nav2-logo">
-                <Link to="/" ></Link>
+                <Link to="/"></Link>
               </div>
               <div class="centre">
                 <a href="/about">About Us</a>

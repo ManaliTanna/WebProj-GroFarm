@@ -269,6 +269,7 @@ export default class ProductsList extends Component {
                 value={this.state.search}
                 onChange={this.onChangeSearch}
               />
+              <div className="SearchContainer">
               <span>Season</span>
               <select
                 className="ml-4 mr-4"
@@ -302,6 +303,7 @@ export default class ProductsList extends Component {
                 <option>Lower to higher</option>
                 <option>Higher to lower</option>
               </select>
+            </div>
             </div>
 
             <div className="row">{this.productList()}</div>
