@@ -1,6 +1,6 @@
 const express = require('express');
 const fileUpload = require("express-fileupload");
-const cors = require('cors');
+const cors = require('cors'); //cross origin resource sharing
 const mongoose = require('mongoose');
 
 require('dotenv').config();

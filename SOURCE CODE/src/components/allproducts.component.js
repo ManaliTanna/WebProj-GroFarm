@@ -10,7 +10,7 @@ const Product = (props) => (
   <div class="product-box ml-2 mr-2 mb-4">
     <img src={"/productpics/" + props.product.image1} class="product-box-img" />
     <h4>{props.product.product}</h4>
-    <h3 className="bold">{props.product.price}€/Kg</h3>
+    <h3 className="bold">{props.product.price} Rs/Kg</h3>
     <div className="product-box-info">
       <div class="d-flex align-items-center justify-content-between">
         <img
@@ -35,7 +35,7 @@ const ProductSale = (props) => (
 <div class="ribbon ribbon-top-right"><span>Sale</span></div>
     <img src={"/productpics/" + props.product.image1} class="product-box-img" />
     <h4>{props.product.product}</h4>
-    <h3 className="bold">{props.product.price}€/Kg</h3>
+    <h3 className="bold">{props.product.price} Rs/Kg</h3>
     <div className="product-box-info">
 
       <div class="d-flex align-items-center justify-content-between">
